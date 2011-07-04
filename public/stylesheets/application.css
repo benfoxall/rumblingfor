@@ -1,0 +1,25 @@
+body{
+    font-family:helvetica, arial, sans-serif;
+}
+
+h2.user{
+    background-repeat:no-repeat;
+    padding-left:65px;
+    height:50px;
+
+}
+h2.user span.at{
+    font-size:.5em;
+    color:#aaa;
+}
+
+p{
+    margin-bottom:3em;
+    color:#aaa;
+    border-bottom:1px dotted #ccc;
+}
+p strong{
+    font-size:2em;
+    color:#f00;
+    padding:.1em;
+}

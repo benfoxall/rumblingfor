@@ -1,0 +1,15 @@
+<% @rumblings.each do |rumbling| %>
+<h2 class="user" style="background-image:url(<%= rumbling.user.profile_image_url %>)">
+    <%= rumbling.user.screen_name %>
+    <span class="at">
+        <%= time_ago_in_words DateTime.parse(rumbling.created_at) %> ago
+    </span>
+</h2>
+<p class="rumbling">
+    <%# hack %>
+    @RumblingFor
+    <% m = rumbling.text.match(/@RumblingFor ([^@]*)(.*)/)  %>
+    <strong><%= m[1] %></strong>
+    <%= m[2] %>
+</p>
+<% end %>
