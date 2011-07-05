@@ -7,9 +7,11 @@
 </h2>
 <p class="rumbling">
     <%# hack %>
-    @RumblingFor
     <% m = rumbling.text.match(/@RumblingFor ([^@]*)(.*)/)  %>
+    <% unless m.nil? %>
+	@RumblingFor
     <strong><%= m[1] %></strong>
     <%= m[2] %>
+	<% end %>
 </p>
 <% end %>
